@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Amy's Bakes | Artisan Home Bakery Tulsa Oklahoma</title>
+  <meta name="description" content="Browse and order from Amy's Bakes — custom cakes, decorated cookies, artisan breads, macarons, cinnamon rolls, and more. Freshly baked to order in Tulsa, Oklahoma.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="navbar-brand" aria-label="Amy's Bakes Home">
+      <div class="navbar-logo-ring" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8 2 4 6 4 12C4 16.5 7 20 11 21.5V22H13V21.5C17 20 20 16.5 20 12C20 6 16 2 12 2Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 14C8 14 9.5 10 12 10C14.5 10 16 14 16 14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="12" cy="7.5" r="1.2" fill="currentColor"/>
+        </svg>
+      </div>
+      <span class="navbar-brand-text">Amy's Bakes</span>
+    </a>
+
+    <ul class="navbar-nav" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:1rem">
+      <button class="navbar-cart" id="cart-btn" aria-label="Open shopping cart">
+        🛒
+        <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- ── Shop Hero ── -->
+    <header class="shop-hero" role="banner">
+      <div class="container">
+        <span class="page-script" aria-hidden="true">The Bakery</span>
+        <h1>Fresh-Baked, Made to Order</h1>
+        <p>Everything here is made from scratch, just for you. Browse below and add your favorites — Amy will be in touch to confirm your order.</p>
+      </div>
+    </header>
+
+    <!-- ── Filter Bar ── -->
+    <div class="filter-bar" role="navigation" aria-label="Product categories">
+      <div class="filter-inner container">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Items</button>
+        <button class="filter-btn" data-filter="cakes" id="filter-cakes">🎂 Cakes</button>
+        <button class="filter-btn" data-filter="cookies" id="filter-cookies">🍪 Cookies & Macarons</button>
+        <button class="filter-btn" data-filter="pastries" id="filter-pastries">🥐 Pastries</button>
+        <button class="filter-btn" data-filter="breads" id="filter-breads">🍞 Breads</button>
+      </div>
+    </div>
+
+    <!-- ── Shop Grid ── -->
+    <section class="shop-section" aria-labelledby="shop-heading">
+      <div class="container">
+
+        <!-- Order Note -->
+        <div class="order-note animate-on-scroll" role="note">
+          <span class="order-note-icon">ℹ</span>
+          <p class="order-note-text">
+            <strong>How ordering works:</strong> Add items to your cart and complete checkout with your contact info. 
+            Amy will reach out within 24 hours to confirm details and arrange pickup or delivery in the Tulsa area. 
+            <strong>No payment is collected online.</strong>
+          </p>
+        </div>
+
+        <h2 id="shop-heading" class="sr-only">All Bakery Items</h2>
+        <div class="shop-grid" id="shop-grid" role="list" aria-label="Bakery products">
+          <!-- Populated by shop.js -->
+        </div>
+
+        <!-- Custom Order CTA -->
+        <div style="margin-top:3.5rem;text-align:center" class="animate-on-scroll">
+          <div class="section-divider"><hr><span class="divider-icon">✦</span><hr></div>
+          <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem">
+            Don't see exactly what you want?
+          </h3>
+          <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:1.5rem;max-width:440px;margin-left:auto;margin-right:auto">
+            Amy specializes in fully custom orders. Describe your dream baked good and she'll make it happen.
+          </p>
+          <a href="contact.html" class="btn btn-primary" id="custom-order-link">Request a Custom Order</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand-name">Amy's Bakes</div>
+          <p>Artisan home bakery serving Tulsa, Oklahoma and surrounding areas.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#custom">Custom Orders</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact" style="font-style:normal">
+          <h3 class="footer-heading">Get in Touch</h3>
+          <div class="footer-contact-item"><span class="ico">📞</span>(918) 555-BAKE</div>
+          <div class="footer-contact-item"><span class="ico">✉</span><a href="mailto:amy.ahlfiel@gmail.com">amy.ahlfiel@gmail.com</a></div>
+          <div class="footer-contact-item"><span class="ico">📍</span>Tulsa, Oklahoma</div>
+          <div class="footer-contact-item"><span class="ico">🌐</span><a href="https://www.amysbakesok.com">amysbakesok.com</a></div>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Amy's Bakes · Amy Ahlfield, Owner &amp; Baker</span>
+        <span>Tulsa, Oklahoma <span class="cat">🐱</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Cart Overlay & Drawer ── -->
+  <div class="cart-overlay" id="cart-overlay" role="dialog" aria-label="Shopping Cart" aria-modal="true"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div class="empty-icon">🛒</div>
+        <p>Your cart is empty.<br>Add something delicious above!</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Order Total</span>
+        <span class="cart-total-amount" id="cart-total-amount">$0.00</span>
+      </div>
+      <button class="btn btn-primary" id="checkout-btn" style="width:100%" disabled>Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ── Checkout Modal ── -->
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-label="Checkout" aria-modal="true">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Complete Your Order</h2>
+        <button class="modal-close" id="checkout-modal-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="checkout-success" style="display:none" class="success-state">
+          <div class="success-icon">✦</div>
+          <h3>Order Placed!</h3>
+          <p>Thank you! Amy will contact you within 24 hours to confirm your order details and arrange pickup or delivery.</p>
+          <br>
+          <button class="btn btn-outline" id="success-close-btn" style="margin:0 auto">Close</button>
+        </div>
+        <form id="checkout-form">
+          <div id="checkout-summary" style="margin-bottom:1.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,67,0.15);border-radius:4px;padding:1rem"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="co-first-name">First Name</label>
+              <input type="text" id="co-first-name" name="firstName" required placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label for="co-last-name">Last Name</label>
+              <input type="text" id="co-last-name" name="lastName" required placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="co-email">Email Address</label>
+            <input type="email" id="co-email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="co-phone">Phone Number</label>
+            <input type="tel" id="co-phone" name="phone" required placeholder="(918) 555-0000">
+          </div>
+          <div class="form-group">
+            <label for="co-pickup-date">Requested Pickup / Delivery Date</label>
+            <input type="date" id="co-pickup-date" name="pickupDate" required>
+          </div>
+          <div class="form-group">
+            <label for="co-notes">Special Instructions or Notes</label>
+            <textarea id="co-notes" name="notes" placeholder="Allergies, flavor preferences, delivery instructions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%" id="place-order-btn">Place Order ✦</button>
+          <p style="font-size:0.75rem;color:var(--text-light);text-align:center;margin-top:0.75rem">
+            Amy will contact you to confirm payment arrangements. No payment is collected online.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

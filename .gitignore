@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+.gemini/
+.agent/
+*.jpg
+*.png
+# Keep generated images in the images folder
+!images/*.png
+!images/*.jpg

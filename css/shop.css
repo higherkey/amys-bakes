@@ -1,0 +1,174 @@
+/* ============================
+   Amy's Bakes — Shop Page
+   shop.css
+   ============================ */
+
+/* ── Shop Hero ── */
+.shop-hero {
+  padding: 4rem 0 2.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%);
+  border-bottom: 1px solid rgba(201,168,67,0.15);
+}
+.shop-hero .page-script {
+  font-family: var(--font-script);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(201,168,67,0.25);
+}
+.shop-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--cream-soft);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+.shop-hero p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ── Filter Bar ── */
+.filter-bar {
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  background: rgba(17,24,39,0.96);
+  border-bottom: 1px solid rgba(201,168,67,0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.85rem 0;
+}
+.filter-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter-btn {
+  padding: 0.45rem 1.25rem;
+  border-radius: 30px;
+  border: 1.5px solid rgba(201,168,67,0.3);
+  background: transparent;
+  color: var(--text-light);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font-body);
+}
+.filter-btn:hover { border-color: var(--gold-dark); color: var(--gold); }
+.filter-btn.active { 
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--navy-dark);
+  border-color: transparent; 
+}
+
+/* ── Shop Grid ── */
+.shop-section { padding: 3rem 0 5rem; }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.shop-card {
+  background: var(--navy-dark);
+  border: 1px solid rgba(201,168,67,0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-gold);
+  border-color: rgba(201,168,67,0.4);
+}
+.shop-card.hidden { display: none; }
+
+.shop-card-image {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.shop-card-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.shop-card:hover .shop-card-image img { transform: scale(1.06); }
+
+.shop-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17,24,39,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.shop-card:hover .shop-card-overlay { opacity: 1; }  
+
+.shop-badge {
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--navy-dark);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 2px;
+}
+
+.shop-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.shop-card-name { font-family: var(--font-serif); font-size: 1.05rem; color: var(--cream); margin-bottom: 0.3rem; }
+.shop-card-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; flex: 1; }
+.shop-card-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.shop-tag {
+  background: rgba(201,168,67,0.08);
+  border: 1px solid rgba(201,168,67,0.2);
+  color: var(--gold-dark);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+}
+.shop-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.shop-card-price { font-family: var(--font-serif); font-size: 1.15rem; color: var(--gold); font-weight: 700; }
+.shop-card-price .from { font-size: 0.7rem; font-family: var(--font-body); color: var(--gold-dark); font-weight: 400; }
+
+/* ── Order Note Banner ── */
+.order-note {
+  background: rgba(201,168,67,0.07);
+  border: 1px solid rgba(201,168,67,0.2);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.order-note-icon { font-size: 1.5rem; color: var(--gold); flex-shrink: 0; }
+.order-note-text { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
+.order-note-text strong { color: var(--gold-light); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .shop-grid { grid-template-columns: 1fr; }
+}
