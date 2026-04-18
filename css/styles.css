@@ -3,7 +3,7 @@
    Navy & Gold Artisan Theme
    ============================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
 
 /* ── CSS Variables ── */
 :root {
@@ -20,7 +20,7 @@
   --text-light:  #d4c99a;
   --white:       #ffffff;
 
-  --font-script:  'Lily Script One', cursive;
+  --font-script:  'Pinyon Script', cursive;
   --font-serif:   'Playfair Display', serif;
   --font-body:    'Lato', sans-serif;
 
@@ -82,11 +82,11 @@ a:hover { color: var(--gold-light); }
   position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2.5rem;
-  height: 70px;
+  height: 80px;
   background: linear-gradient(180deg, rgba(17,24,39,0.98) 0%, rgba(26,37,64,0.95) 100%);
   border-bottom: 1px solid rgba(201,168,67,0.3);
   backdrop-filter: blur(12px);
@@ -117,18 +117,20 @@ a:hover { color: var(--gold-light); }
 }
 .navbar-brand-text {
   font-family: var(--font-script);
-  font-size: 1.45rem;
+  font-size: 2.1rem;
   font-weight: 400;
   color: var(--gold);
   line-height: 1;
   text-shadow: 0 0 15px rgba(201,168,67,0.3);
+  margin-top: 0.2rem;
 }
 
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
+  justify-self: center;
 }
 .navbar-nav a {
   font-family: var(--font-body);
@@ -181,6 +183,12 @@ a:hover { color: var(--gold-light); }
 }
 .cart-badge.has-items { display: flex; }
 
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-self: end;
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -303,10 +311,10 @@ footer {
 }
 .footer-brand .brand-name {
   font-family: var(--font-script);
-  font-size: 2rem;
+  font-size: 2.8rem;
   color: var(--gold);
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 .footer-brand p { font-size: 0.85rem; color: var(--text-light); }
 .footer-heading {

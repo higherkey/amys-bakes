@@ -177,7 +177,7 @@ function cartRemove(id) { cart.removeItem(id); }
 // ── Add To Cart ──
 function addToCart(product) {
   cart.addItem(product);
-  showToast(`✓ ${product.name} added to cart`, 'success');
+  showToast(`✓ ${product.name} added to bag`, 'success');
 }
 
 // ── Checkout Modal ──
@@ -219,7 +219,7 @@ function initCheckoutModal() {
 
 function openCheckoutModal() {
   if (cart.items.length === 0) {
-    showToast('Your cart is empty!');
+    showToast('Your bag is empty!');
     return;
   }
   const overlay = document.getElementById('checkout-overlay');
