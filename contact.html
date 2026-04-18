@@ -117,6 +117,9 @@
               <button class="form-tab" data-tab="tab-custom" id="tab-btn-custom" role="tab" aria-selected="false" aria-controls="tab-custom">
                 🎂 Custom Request
               </button>
+              <button class="form-tab" data-tab="tab-review" id="tab-btn-review" role="tab" aria-selected="false" aria-controls="tab-review">
+                ⭐ Leave a Review
+              </button>
             </div>
 
             <!-- Tab: General Message -->
@@ -268,6 +271,43 @@
               </div>
             </div>
 
+            <!-- Tab: Leave a Review -->
+            <div class="tab-pane" id="tab-review" role="tabpanel" aria-labelledby="tab-btn-review">
+              <div class="form-panel">
+                <h3>Share Your Experience</h3>
+                <p>Recently enjoyed one of Amy's bakes? We'd love to hear your thoughts!</p>
+                <form id="review-form" novalidate>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="rev-name">Your Name</label>
+                      <input type="text" id="rev-name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                      <label for="rev-rating">Rating</label>
+                      <select id="rev-rating" name="rating" required>
+                        <option value="5">★★★★★ (Excellent)</option>
+                        <option value="4">★★★★☆ (Great)</option>
+                        <option value="3">★★★☆☆ (Good)</option>
+                        <option value="2">★★☆☆☆ (Fair)</option>
+                        <option value="1">★☆☆☆☆ (Poor)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="rev-order">What did you order?</label>
+                    <input type="text" id="rev-order" name="order" placeholder="e.g. Birthday Cake, Sourdough...">
+                  </div>
+                  <div class="form-group">
+                    <label for="rev-text">Your Review</label>
+                    <textarea id="rev-text" name="review" required placeholder="How was the taste, presentation, and service?"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="review-submit-btn" style="width:100%">
+                    Submit Review ✦
+                  </button>
+                </form>
+              </div>
+            </div>
+
           </div><!-- /contact-forms -->
         </div><!-- /contact-layout -->
       </div>
@@ -409,6 +449,9 @@
             <button class="tab-btn" id="tab-custom" role="tab" aria-selected="false" aria-controls="panel-custom">
               Custom Inquiry
             </button>
+            <button class="tab-btn" id="tab-review" role="tab" aria-selected="false" aria-controls="panel-review">
+              Leave a Review
+            </button>
           </div>
 
           <!-- General Form -->
@@ -501,6 +544,41 @@
               </div>
 
               <button type="submit" class="btn btn-primary" id="custom-submit">Submit Inquiry ✦</button>
+            </form>
+          </div>
+
+          <!-- Review Form -->
+          <div class="tab-panel" id="panel-review" role="tabpanel" aria-labelledby="tab-review">
+            <div class="custom-form-header">
+              <h3>Share Your Experience</h3>
+              <p>Recently enjoyed one of Amy's bakes? We'd love to hear your thoughts!</p>
+            </div>
+            <form id="review-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="r-name">Your Name</label>
+                  <input type="text" id="r-name" name="name" required placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="r-rating">Rating</label>
+                  <select id="r-rating" name="rating" required>
+                    <option value="5">★★★★★ (Excellent)</option>
+                    <option value="4">★★★★☆ (Great)</option>
+                    <option value="3">★★★☆☆ (Good)</option>
+                    <option value="2">★★☆☆☆ (Fair)</option>
+                    <option value="1">★☆☆☆☆ (Poor)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="r-order">What did you order?</label>
+                <input type="text" id="r-order" name="order" placeholder="e.g. Birthday Cake, Sourdough Bread...">
+              </div>
+              <div class="form-group">
+                <label for="r-text">Your Review</label>
+                <textarea id="r-text" name="review" required placeholder="How was the taste, presentation, and service?" style="min-height:150px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="review-submit">Submit Review ✦</button>
             </form>
           </div>
 
