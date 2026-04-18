@@ -360,17 +360,198 @@
             <button class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
               Can I see examples of past work?
               <span class="faq-chevron" aria-hidden="true">▾</span>
-            </button>
-            <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
-              <div class="faq-answer-inner">
-                Yes! Check the Shop page for images of Amy's creations. You can also reach out directly 
-                and she'll be happy to share her portfolio. Her work is also featured on social media — 
-                ask her for a link when you get in touch!
-              </div>
+        <span class="page-script" aria-hidden="true">Get in Touch</span>
+        <h1>Launch Inquiry</h1>
+        <p>While we are preparing for our official launch, we'd love to hear from you. Have a question or want to discuss a future idea? Send us a message below.</p>
+      </div>
+    </header>
+
+    <div class="container contact-container">
+      <div class="contact-grid">
+        
+        <!-- Contact Sidebar -->
+        <aside class="contact-sidebar animate-on-scroll">
+          <div class="sidebar-block">
+            <h3>Direct Contact</h3>
+            <div class="contact-detail">
+              <span class="contact-detail-label">Text or Call</span>
+              <div class="contact-detail-value"><a href="tel:9704660813">970-466-0813</a></div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-label">Email Address</span>
+              <div class="contact-detail-value"><a href="mailto:amydue16127@gmail.com">amydue16127@gmail.com</a></div>
             </div>
           </div>
 
-        </div><!-- /faq-list -->
+          <div class="sidebar-block">
+            <h3>Location</h3>
+            <div class="contact-detail">
+              <div class="contact-detail-value">Tulsa, Oklahoma &amp; Surrounding Areas</div>
+              <p style="font-size:0.85rem;color:var(--text-light);margin-top:0.4rem">Home bakery pickup available by appointment once we launch.</p>
+            </div>
+          </div>
+
+          <div class="sidebar-block">
+            <h3>Social Media</h3>
+            <div class="contact-social">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Contact Main -->
+        <main class="contact-main animate-on-scroll" style="transition-delay:0.1s">
+          <div class="contact-tabs" role="tablist">
+            <button class="tab-btn active" id="tab-general" role="tab" aria-selected="true" aria-controls="panel-general">
+              General Question
+            </button>
+            <button class="tab-btn" id="tab-custom" role="tab" aria-selected="false" aria-controls="panel-custom">
+              Custom Inquiry
+            </button>
+          </div>
+
+          <!-- General Form -->
+          <div class="tab-panel active" id="panel-general" role="tabpanel" aria-labelledby="tab-general">
+            <form id="general-contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required placeholder="Write your message here..." style="min-height:150px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="general-submit">Send Message ✦</button>
+            </form>
+          </div>
+
+          <!-- Custom Request Form -->
+          <div class="tab-panel" id="panel-custom" role="tabpanel" aria-labelledby="tab-custom">
+            <div class="custom-form-header">
+              <h3>Start a Custom Inquiry</h3>
+              <p>Tell Amy about the special creation you're envisioning. She'll get back to you to discuss possibilities.</p>
+            </div>
+            <form id="custom-request-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c-name">Your Name</label>
+                  <input type="text" id="c-name" name="name" required placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="c-email">Email Address</label>
+                  <input type="email" id="c-email" name="email" required placeholder="you@example.com">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label>What are you looking for?</label>
+                <div class="flavor-chips">
+                  <label class="chip">
+                    <input type="checkbox" name="type" value="Cake">
+                    <span>Celebration Cake</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="type" value="Cookies">
+                    <span>Decorated Cookies</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="type" value="Bread">
+                    <span>Artisan Bread</span>
+                  </label>
+                  <label class="chip">
+                    <input type="checkbox" name="type" value="Pastries">
+                    <span>Pastries / Other</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c-date">When would you need it? (Optional)</label>
+                  <input type="date" id="c-date" name="date">
+                </div>
+                <div class="form-group">
+                  <label for="c-guests">Approx. Number of Guests</label>
+                  <input type="number" id="c-guests" name="guests" placeholder="e.g. 20">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="c-desc">Describe your vision</label>
+                <textarea id="c-desc" name="description" required placeholder="Flavors, colors, theme, or any specific ideas you have..." style="min-height:120px"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="c-file" class="file-label">
+                  <span>📎 Upload Inspiration Photo (Optional)</span>
+                  <input type="file" id="c-file" name="file" accept="image/*" class="sr-only">
+                  <small id="file-name" style="display:block;margin-top:0.3rem;color:var(--gold)"></small>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="custom-submit">Submit Inquiry ✦</button>
+            </form>
+          </div>
+
+          <!-- Success Message -->
+          <div id="form-success" class="success-state" style="display:none; margin-top:2rem">
+            <div class="success-icon">✦</div>
+            <h3>Thank You!</h3>
+            <p>Your message has been received. This site is under construction, but Amy will follow up with you personally via email shortly.</p>
+            <br>
+            <button class="btn btn-outline" onclick="location.reload()" style="margin:0 auto">Send Another</button>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- ── FAQ Section ── -->
+    <section class="section faq-section" aria-labelledby="faq-heading">
+      <div class="container animate-on-scroll">
+        <div class="section-header">
+          <span class="section-label">Common Questions</span>
+          <h2 id="faq-heading" class="section-title">Preparation FAQ</h2>
+        </div>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Are you currently taking orders?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>We are currently in our "Pre-Launch" phase! While the website isn't processing automated orders yet, we are accepting inquiries and may take small local orders on a case-by-case basis before the official launch.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Do you offer delivery in Tulsa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>Yes! We will offer local delivery within Tulsa and the surrounding suburbs for a small fee. Free pickup will also be available from our home bakery location.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              Can you do allergen-friendly bakes?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <p>We do offer some gluten-friendly and nut-free options. However, please note that we operate in a kitchen that handles wheat, nuts, and dairy, so we cannot guarantee a 100% allergen-free environment for severe allergies.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -389,59 +570,64 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
             <li><a href="contact.html#custom">Custom Orders</a></li>
           </ul>
         </nav>
         <address class="footer-contact" style="font-style:normal">
           <h3 class="footer-heading">Get in Touch</h3>
-          <div class="footer-contact-item"><span class="ico">📞</span>(918) 555-BAKE</div>
-          <div class="footer-contact-item"><span class="ico">✉</span><a href="mailto:amy.ahlfiel@gmail.com">amy.ahlfiel@gmail.com</a></div>
+          <div class="footer-contact-item"><span class="ico">📞</span><a href="tel:9704660813">970-466-0813</a></div>
+          <div class="footer-contact-item"><span class="ico">✉</span><a href="mailto:amydue16127@gmail.com">amydue16127@gmail.com</a></div>
           <div class="footer-contact-item"><span class="ico">📍</span>Tulsa, Oklahoma</div>
           <div class="footer-contact-item"><span class="ico">🌐</span><a href="https://www.amysbakesok.com">amysbakesok.com</a></div>
         </address>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Amy's Bakes · Amy Ahlfield, Owner &amp; Baker</span>
-        <span>Tulsa, Oklahoma <span class="cat">🐱</span></span>
+        <div style="display:flex; flex-direction:column; gap: 4px;">
+          <span>&copy; 2025 Amy's Bakes · Amy Ahlfield, Owner &amp; Baker</span>
+          <span>Tulsa, Oklahoma <span class="cat">🐱</span></span>
+        </div>
+        <div class="footer-credit">
+          Built with 💛 by <a href="https://github.com/higherkey" target="_blank" rel="noopener">higherkey</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- ── Cart Overlay & Drawer ── -->
-  <div class="cart-overlay" id="cart-overlay" role="dialog" aria-label="Shopping Cart" aria-modal="true"></div>
+  <!-- ── Inquiry Bag (Drawer) ── -->
+  <div class="cart-overlay" id="cart-overlay" role="dialog" aria-label="Inquiry Bag" aria-modal="true"></div>
   <div class="cart-drawer" id="cart-drawer">
     <div class="cart-header">
-      <h2>Your Cart</h2>
-      <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+      <h2>Inquiry Bag</h2>
+      <button class="cart-close" id="cart-close" aria-label="Close inquiry bag">✕</button>
     </div>
     <div class="cart-items" id="cart-items">
       <div class="cart-empty" id="cart-empty">
-        <div class="empty-icon">🛒</div>
-        <p>Your cart is empty.<br><a href="shop.html" style="color:var(--gold)">Browse the bakery</a></p>
+        <div class="empty-icon">👜</div>
+        <p>Your inquiry bag is empty.<br>Add some examples to get started!</p>
       </div>
     </div>
     <div class="cart-footer">
-      <div class="cart-total">
+      <div class="cart-total" style="display:none">
         <span>Order Total</span>
         <span class="cart-total-amount" id="cart-total-amount">$0.00</span>
       </div>
-      <button class="btn btn-primary" id="checkout-btn" style="width:100%" disabled>Proceed to Checkout</button>
+      <button class="btn btn-primary" id="checkout-btn" style="width:100%" disabled>Send Inquiry Request</button>
     </div>
   </div>
 
-  <!-- ── Checkout Modal ── -->
+  <!-- ── Checkout Modal (Inquiry) ── -->
   <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-label="Checkout" aria-modal="true">
     <div class="modal">
       <div class="modal-header">
-        <h2>Complete Your Order</h2>
-        <button class="modal-close" id="checkout-modal-close" aria-label="Close checkout">✕</button>
+        <h2>Send Inquiry Request</h2>
+        <button class="modal-close" id="checkout-modal-close" aria-label="Close inquiry">✕</button>
       </div>
       <div class="modal-body">
         <div id="checkout-success" style="display:none" class="success-state">
           <div class="success-icon">✦</div>
-          <h3>Order Placed!</h3>
-          <p>Thank you! Amy will contact you within 24 hours to confirm your order details and arrange pickup or delivery.</p>
+          <h3>Inquiry Sent!</h3>
+          <p>Thank you! This site is currently under construction, but Amy will receive your request and get back to you soon.</p>
           <br>
           <button class="btn btn-outline" id="success-close-btn" style="margin:0 auto">Close</button>
         </div>
@@ -450,11 +636,11 @@
           <div class="form-row">
             <div class="form-group">
               <label for="co-first-name">First Name</label>
-              <input type="text" id="co-first-name" name="firstName" required placeholder="First name">
+              <input type="text" id="co-first-name" name="firstName" required placeholder="First Name">
             </div>
             <div class="form-group">
               <label for="co-last-name">Last Name</label>
-              <input type="text" id="co-last-name" name="lastName" required placeholder="Last name">
+              <input type="text" id="co-last-name" name="lastName" required placeholder="Last Name">
             </div>
           </div>
           <div class="form-group">
@@ -463,19 +649,19 @@
           </div>
           <div class="form-group">
             <label for="co-phone">Phone Number</label>
-            <input type="tel" id="co-phone" name="phone" required placeholder="(918) 555-0000">
+            <input type="tel" id="co-phone" name="phone" required placeholder="Phone Number">
           </div>
           <div class="form-group">
-            <label for="co-pickup-date">Requested Pickup / Delivery Date</label>
-            <input type="date" id="co-pickup-date" name="pickupDate" required>
+            <label for="co-pickup-date">Requested Date (Optional)</label>
+            <input type="date" id="co-pickup-date" name="pickupDate">
           </div>
           <div class="form-group">
-            <label for="co-notes">Special Instructions or Notes</label>
-            <textarea id="co-notes" name="notes" placeholder="Allergies, flavor preferences, delivery instructions..."></textarea>
+            <label for="co-notes">Message or Special Requests</label>
+            <textarea id="co-notes" name="notes" placeholder="Tell Amy what you're looking for..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%" id="place-order-btn">Place Order ✦</button>
+          <button type="submit" class="btn btn-primary" style="width:100%" id="place-order-btn">Submit Inquiry ✦</button>
           <p style="font-size:0.75rem;color:var(--text-light);text-align:center;margin-top:0.75rem">
-            Amy will contact you to confirm payment arrangements. No payment is collected online.
+            This is an inquiry form only. No payment is collected.
           </p>
         </form>
       </div>

@@ -9,9 +9,9 @@ const PRODUCTS = [
     id: 'custom-cake',
     name: 'Custom Celebration Cake',
     desc: 'Fully customized celebration cakes for any occasion — birthdays, weddings, anniversaries, and more.',
-    price: 65.00,
+    price: null,
     image: 'images/cake.png',
-    badge: 'Popular',
+    badge: 'Placeholder',
     category: 'cakes',
     tags: ['Custom', 'Made to Order'],
     from: true
@@ -20,9 +20,9 @@ const PRODUCTS = [
     id: 'artisan-bread',
     name: 'Artisan Sourdough & Croissants',
     desc: 'Slow-fermented sourdough loaves and buttery, flaky croissants baked fresh to order.',
-    price: 18.00,
+    price: null,
     image: 'images/bread.png',
-    badge: null,
+    badge: 'Placeholder',
     category: 'breads',
     tags: ['Sourdough', 'Fresh Baked'],
     from: false
@@ -31,9 +31,9 @@ const PRODUCTS = [
     id: 'decorated-cookies',
     name: 'Decorated Sugar Cookies',
     desc: 'Hand-painted royal icing cookies in any theme or color. Perfect for events and gifting.',
-    price: 28.00,
+    price: null,
     image: 'images/cookies.png',
-    badge: 'Bestseller',
+    badge: 'Placeholder',
     category: 'cookies',
     tags: ['Custom', 'Per Dozen'],
     from: true
@@ -42,9 +42,9 @@ const PRODUCTS = [
     id: 'macaron-tower',
     name: 'French Macaron Collection',
     desc: 'Delicate Parisian-style macarons available in seasonal flavors. Sold by the half or full dozen.',
-    price: 22.00,
+    price: null,
     image: 'images/macarons.png',
-    badge: 'Seasonal',
+    badge: 'Placeholder',
     category: 'cookies',
     tags: ['Gluten-Friendly', 'Per Dozen'],
     from: true
@@ -53,9 +53,9 @@ const PRODUCTS = [
     id: 'cinnamon-rolls',
     name: 'Gourmet Cinnamon Rolls',
     desc: 'Oversized, fluffy cinnamon rolls with brown butter cream cheese frosting. Sold by the half dozen.',
-    price: 24.00,
+    price: null,
     image: 'images/cinnamon-rolls.png',
-    badge: null,
+    badge: 'Placeholder',
     category: 'pastries',
     tags: ['Half Dozen', 'Classic'],
     from: false
@@ -64,9 +64,9 @@ const PRODUCTS = [
     id: 'cookie-box',
     name: 'Signature Cookie Gift Box',
     desc: 'A curated assortment of Amy\'s best cookies — a beautiful gift for any occasion.',
-    price: 38.00,
+    price: null,
     image: 'images/cookies.png',
-    badge: 'Gift',
+    badge: 'Placeholder',
     category: 'cookies',
     tags: ['Gift Box', 'Assorted'],
     from: false
@@ -80,9 +80,7 @@ function renderProducts(filter = 'all') {
 
   grid.innerHTML = PRODUCTS.map(p => {
     const hidden = filter !== 'all' && p.category !== filter ? 'hidden' : '';
-    const priceLabel = p.from
-      ? `<span class="from">from </span>$${p.price.toFixed(2)}`
-      : `$${p.price.toFixed(2)}`;
+    const priceLabel = `<span class="from">Inquiry Only</span>`;
     const badge = p.badge ? `<span class="shop-badge">${p.badge}</span>` : '';
     const tags = p.tags.map(t => `<span class="shop-tag">${t}</span>`).join('');
 
@@ -93,7 +91,7 @@ function renderProducts(filter = 'all') {
           <img src="${p.image}" alt="${p.name}">
           <div class="shop-card-overlay">
             <button class="btn btn-primary" onclick="handleAddToCart('${p.id}')" id="add-${p.id}">
-              Add to Cart
+              Add to Inquiry
             </button>
           </div>
         </div>
@@ -104,7 +102,7 @@ function renderProducts(filter = 'all') {
           <div class="shop-card-footer">
             <div class="shop-card-price">${priceLabel}</div>
             <button class="btn btn-outline" style="padding:0.55rem 1rem;font-size:0.75rem" onclick="handleAddToCart('${p.id}')" id="add-btn-${p.id}">
-              Add to Cart
+              Add to Inquiry
             </button>
           </div>
         </div>
