@@ -16,5 +16,9 @@ The header logo in the navbar has several issues:
 1. Modified `css/styles.css` to refine `.navbar-logo-ring` and its child `img`.
 2. Updated media queries for responsive logo sizing.
 3. Fixed `contact.html` structure and removed dead/duplicate HTML.
-4. Verified that `js/contact.js` matches the IDs and classes in the restored `contact.html`.
+5. Replaced Bag emoji with professional SVG icon across all pages.
+6. Generated `assets/logo.svg` (removing "EST.") and `assets/favicon.svg` using Satori.
+7. Updated all pages to use the new SVG assets and added favicon links.
+8. Refined `.navbar-logo-ring` CSS for optimal SVG display.
+
 

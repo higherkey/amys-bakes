@@ -105,15 +105,13 @@ a:hover { color: var(--gold-light); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--navy-dark);
   overflow: hidden;
   transition: transform var(--transition);
 }
 .navbar-logo-ring img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.1); /* Zoom to hide square corners of logo.jpg */
+  object-fit: contain;
 }
 .navbar-brand:hover .navbar-logo-ring {
   transform: scale(1.05);
@@ -172,6 +170,15 @@ a:hover { color: var(--gold-light); }
   transition: all var(--transition);
 }
 .navbar-cart:hover { background: var(--gold-glow); border-color: var(--gold); }
+.nav-icon-svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--gold);
+  transition: stroke var(--transition);
+}
+.navbar-cart:hover .nav-icon-svg {
+  stroke: var(--gold-light);
+}
 .cart-badge {
   position: absolute;
   top: -4px; right: -4px;

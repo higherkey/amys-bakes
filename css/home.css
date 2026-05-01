@@ -64,7 +64,7 @@
   line-height: 0.9;
   text-shadow: 0 0 60px rgba(201,168,67,0.3);
   display: block;
-  margin-bottom: 0.35rem;
+  margin: 1.5rem 0;
 }
 .hero-tagline {
   font-family: var(--font-serif);
