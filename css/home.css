@@ -212,7 +212,7 @@
 .about-image-accent::before { top: 50%; transform: translateY(-50%); }
 .about-image-accent::after { display: none; }
 
-.about-content { }
+
 .about-script {
   font-family: var(--font-script);
   font-size: 3rem;

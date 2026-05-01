@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('node:fs');
 const satori = require('satori').default;
 
 async function generate() {

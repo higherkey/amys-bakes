@@ -20,5 +20,10 @@ The header logo in the navbar has several issues:
 6. Generated `assets/logo.svg` (removing "EST.") and `assets/favicon.svg` using Satori.
 7. Updated all pages to use the new SVG assets and added favicon links.
 8. Refined `.navbar-logo-ring` CSS for optimal SVG display.
+9. Removed empty ruleset for `.about-content` in `home.css`.
+10. Resolved duplicate `display` property in `.cart-badge` in `styles.css`.
+11. Improved contrast for ghost button hover state in `styles.css`.
+12. Updated script imports to use `node:fs` for better compatibility and standards.
+13. Fixed duplicate `.navbar-brand` selector in `styles.css`.
 
 
