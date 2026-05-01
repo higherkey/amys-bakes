@@ -11,6 +11,7 @@ yarn-error.log*
 # System
 .DS_Store
 Thumbs.db
+.vscode/
 
 # Project
 .gemini/
