@@ -7,6 +7,7 @@
   <meta name="description" content="Amy's Bakes is a Tulsa, Oklahoma home bakery specializing in custom cakes, artisan breads, decorated cookies, and more. Order handcrafted baked goods for any occasion.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
@@ -18,9 +19,6 @@
   <!-- ── Navbar ── -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="navbar-brand" aria-label="Amy's Bakes Home">
-      <div class="navbar-logo-ring" aria-hidden="true">
-        <img src="assets/logo.jpg" alt="Amy's Bakes Logo">
-      </div>
       <span class="navbar-brand-text">Amy's Bakes</span>
     </a>
 
@@ -32,7 +30,11 @@
 
     <div class="navbar-actions">
       <button class="navbar-cart" id="cart-btn" aria-label="Open inquiry bag">
-        👜
+        <svg class="nav-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
         <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
       </button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -70,7 +72,7 @@
       <div class="hero-badge" aria-hidden="true">
         <span class="badge-script">Amy's</span>
         <span class="badge-script" style="font-size:1.6rem">Bakes</span>
-        <span class="badge-sub">Est. Tulsa, OK</span>
+        <span class="badge-sub">TULSA, OK</span>
       </div>
 
       <div class="hero-scroll" aria-hidden="true">
@@ -324,7 +326,13 @@
     </div>
     <div class="cart-items" id="cart-items">
       <div class="cart-empty" id="cart-empty">
-        <div class="empty-icon">👜</div>
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 64px; height: 64px; opacity: 0.5;" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
         <p>Your inquiry bag is empty.<br>Add some examples to get started!</p>
       </div>
     </div>
